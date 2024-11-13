@@ -19,7 +19,7 @@ const {
 const wallPad = 64;
 const loseHeight = 84;
 const statusBarHeight = 48;
-const previewBallHeight = 32;
+const previewBallHeight = 80;
 const friction = {
 	friction: 0.6,
 	frictionStatic: 0.6,
@@ -35,8 +35,8 @@ const GameStates = {
 };
 
 const Game = {
-	width: 640,
-	height: 960,
+	width: 1000,
+	height: 1500,
 	elements: {
 		canvas: document.getElementById('game-canvas'),
 		ui: document.getElementById('game-ui'),

@@ -54,8 +54,9 @@
       transform-origin: top left;
     }
 
-    #game-score {
+    #game-score-top {
       position: absolute;
+      height: 140px;
       width: 100%;
       border-bottom: 2px dotted #333;
       font-size: 84px;
@@ -118,6 +119,7 @@
       height: 48px;
       background-color: var(--col-bg-lighter);
       display: flex;
+      justify-content: space-around;
     }
 
     .game-status-item {
@@ -138,7 +140,17 @@
       flex-direction: column;
     }
 
+    .small-gap {
+      gap: 2px;
+    }
+
     #game-highscore-value {
+      color: #333;
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    #game-score {
       color: #333;
       font-weight: 700;
       font-size: 24px;
@@ -159,7 +171,7 @@
   <div class="container">
     <div id="game-canvas">
       <div id="game-ui">
-        <p id="game-score"></p>
+        <p id="game-score-top"></p>
 
         <div id="game-end-container">
           <div id="game-end">
@@ -170,8 +182,8 @@
 
         <div id="game-status">
           <div class="game-status-item">
-            <div class="game-status-label">Highscore</div>
-            <div id="game-highscore-value">0</div>
+            <div class="game-status-label">Score</div>
+            <div id="game-score">0</div>
           </div>
           <div class="game-status-item">
             <div class="game-status-label">Next</div>
@@ -179,7 +191,7 @@
           </div>
           <div class="game-status-item flex-column">
             <div>Evolution</div>
-            <div class="game-status-item">
+            <div class="game-status-item small-gap">
               <img id="game-fruit-circle" src="./assets/img/circle0.png" />
               <img id="game-fruit-circle" src="./assets/img/circle1.png" />
               <img id="game-fruit-circle" src="./assets/img/circle2.png" />
@@ -192,6 +204,10 @@
               <img id="game-fruit-circle" src="./assets/img/circle9.png" />
               <img id="game-fruit-circle" src="./assets/img/circle10.png" />
             </div>
+          </div>
+          <div class="game-status-item">
+            <div class="game-status-label">Highscore</div>
+            <div id="game-highscore-value">0</div>
           </div>
         </div>
       </div>
