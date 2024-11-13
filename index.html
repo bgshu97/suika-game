@@ -134,6 +134,10 @@
       margin-right: 8px;
     }
 
+    .flex-column {
+      flex-direction: column;
+    }
+
     #game-highscore-value {
       color: #333;
       font-weight: 700;
@@ -141,6 +145,11 @@
     }
 
     #game-next-fruit {
+      width: 24px;
+      height: 24px;
+    }
+    
+    #game-fruit-circle {
       width: 24px;
       height: 24px;
     }
@@ -167,6 +176,22 @@
           <div class="game-status-item">
             <div class="game-status-label">Next</div>
             <img id="game-next-fruit" src="./assets/img/circle0.png" />
+          </div>
+          <div class="game-status-item flex-column">
+            <div>Evolution</div>
+            <div class="game-status-item">
+              <img id="game-fruit-circle" src="./assets/img/circle0.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle1.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle2.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle3.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle4.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle5.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle6.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle7.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle8.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle9.png" />
+              <img id="game-fruit-circle" src="./assets/img/circle10.png" />
+            </div>
           </div>
         </div>
       </div>

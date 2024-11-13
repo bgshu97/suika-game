@@ -21,8 +21,8 @@ const loseHeight = 84;
 const statusBarHeight = 48;
 const previewBallHeight = 32;
 const friction = {
-	friction: 0.006,
-	frictionStatic: 0.006,
+	friction: 0.6,
+	frictionStatic: 0.6,
 	frictionAir: 0,
 	restitution: 0.1
 };
@@ -61,6 +61,7 @@ const Game = {
 		pop8: new Audio('./assets/pop8.mp3'),
 		pop9: new Audio('./assets/pop9.mp3'),
 		pop10: new Audio('./assets/pop10.mp3'),
+		background: new Audio('./assets/background.mp3'),
 	},
 
 	stateIndex: GameStates.MENU,
@@ -144,7 +145,12 @@ const Game = {
 	},
 
 	startGame: function () {
-		Game.sounds.click.play();
+		var background = Game.sounds['background'];
+		background.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.play();
+		}, false);
+		background.play();
 
 		Composite.remove(engine.world, menuStatics);
 		Composite.add(engine.world, gameStatics);
